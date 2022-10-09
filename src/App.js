@@ -5,9 +5,11 @@ import ItemListContainer from "./components/Products/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CartContextProvider from "./components/context/cartContext";
 
 function App() {
   return (
+    <CartContextProvider>
     <BrowserRouter>
       <Header />
       <Routes>
@@ -20,6 +22,7 @@ function App() {
       </Routes>
       <Footer />
     </BrowserRouter>
+    </CartContextProvider>
   );
 }
 
